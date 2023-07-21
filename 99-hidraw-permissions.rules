@@ -1,0 +1,2 @@
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb-serial", MODE="0666"
