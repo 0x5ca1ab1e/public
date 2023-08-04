@@ -1,0 +1,4 @@
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666"
+KERNEL=="ttyUSB*", SUBSYSTEMS=="usb-serial", MODE="0666"
+SUBSYSTEM=="tty", SUBSYSTEMS=="usb", DRIVERS=="usb", SYMLINK+="tty.usb-$attr{devpath}"
+SUBSYSTEM=="hidraw", SUBSYSTEMS=="hid", KERNEL!="hidraw0", SYMLINK+="hidraw-relay"
