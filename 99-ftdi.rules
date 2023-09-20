@@ -3,4 +3,4 @@ PROGRAM="/bin/sh -c '\
     echo -n $id:1.0 > /sys/bus/usb/drivers/ftdi_sio/unbind;\
     echo -n $id:1.1 > /sys/bus/usb/drivers/ftdi_sio/unbind\
 '"
-ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0666"
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0666", SYMLINK+="ftdi-relay"
